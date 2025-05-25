@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RXDiagnodent - AI Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+        h1 { color: #333366; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; max-width: 600px; margin: auto; }
+        .output { margin-top: 20px; background: #eef; padding: 10px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RXDiagnodent Demo</h1>
+        <p>Upload a dental panoramic X-ray and simulate a diagnosis per tooth.</p>
+        <input type="file" id="imageInput"><br><br>
+        <button onclick="simulateDiagnosis()">Simulate Diagnosis</button>
+        <div class="output" id="resultBox">
+            <strong>Results will appear here...</strong>
+        </div>
+    </div>
+    <script>
+        function simulateDiagnosis() {
+            const teeth = [11,12,13,14,15,16,21,22,23,24,25,26];
+            const diagnoses = ['carie', 'pulpita', 'granulom', 'fractura', 'parodontita', 'sanatos'];
+            let output = '<h3>Simulated Results:</h3><ul>';
+            for (let t of teeth) {
+                const diag = diagnoses[Math.floor(Math.random() * diagnoses.length)];
+                const score = (Math.random() * 0.4 + 0.6).toFixed(2);
+                output += `<li><b>Dinte ${t}</b>: ${diag}, scor: ${score}</li>`;
+            }
+            output += '</ul>';
+            document.getElementById('resultBox').innerHTML = output;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+    {
+        "nume": "DentalPro Clinic",
+        "lat": 44.4352,
+        "lng": 26.1028,
+        "rating": 4.8,
+        "non_stop": false
+    },
+    {
+        "nume": "SmileZone",
+        "lat": 44.43,
+        "lng": 26.11,
+        "rating": 4.9,
+        "non_stop": true
+    },
+    {
+        "nume": "CityDent Bucuresti",
+        "lat": 44.441,
+        "lng": 26.0971,
+        "rating": 4.7,
+        "non_stop": false
+    },
+    {
+        "nume": "Urgente Stomatologice 24/7",
+        "lat": 44.4385,
+        "lng": 26.105,
+        "rating": 4.6,
+        "non_stop": true
+    }
+]
